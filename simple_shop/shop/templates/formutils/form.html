@@ -1,0 +1,44 @@
+{% load formutils %}
+{% if form.options %}
+    <div{% if form.options.cssclass %} class="{{ form.options.cssclass }}"{% endif %}>
+        <form action="{{ form.options.action }}"
+            {% if form.options.id %} id="{{ form.options.id }}"{% endif %}
+            {% if form.options.method %} method="{{ form.options.method }}"{% endif %}
+            {% if form.options.type %} type="{{ form.options.type }}"{% endif %}
+            {% if form.options.enctype %} enctype="{{ form.options.enctype }}"{% endif %}
+            {% if form.options.accept %} accept="{{ form.optons.accept }}"{% endif %}
+            {% if form.options.accept_charset %} accept_charset="{{ form.options.accept_charset }}"{% endif %}>
+{% endif %}
+{% if form.errors %}
+        <div class="error">
+           There was errors, please correct them and try again.
+        </div>
+      {% endif %}
+      {% if form.non_field_errors %}
+          {% for error in form.non_field_errors %}
+                <div class="error">{{ error }}</div>
+          {% endfor %}
+      {% endif %}
+{% for field in form %}
+    <fieldset>
+        {% if field.errors %}
+            <div class="error">{{ field.errors }}</div>
+        {% endif %}
+        {{ field.label_tag }} {{ field }}
+        {% if form.options and form.options.include_help_text %}
+            <div class="field_help">{{ field.help_text }}</div>
+        {% endif %}
+    </fieldset>
+{% endfor %}
+{% if form.options %}
+    <fieldset>
+        <input{% if form.options.submit_id %} id="{{ form.options.submit_id }}"{% endif %} type="submit" name="submit" value="{{ form.options.submit_label }}" />
+        {% if form.options.has_reset %}
+            <input{% if form.options.reset_id %} id="{{ form.options.reset_id }}"{% endif %} type="reset" name="reset" value="{{ form.options.reset_label }}" />
+        {% endif %}
+    </fieldset>
+{% endif %}
+{% if form.options %}
+        </form>
+    </div>
+{% endif %}

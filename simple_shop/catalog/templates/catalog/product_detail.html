@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% load thumbnail %}
+{% load placeholder_tags %}
+
+
+{% block content %}
+
+<div class="product_item"> 
+	<h1>{{ product.name }}</h1>
+	<h3>{{ product.slug}}</h3>
+	{% if product.sku %}<h3>{{ product.sku }}</h3>{% endif %}
+	<div class="product_info">{{ product.short_description }}</div>
+	<ul class="product_attributes">
+		{% for detail in product.details.all %}
+		<li>{{ detail.attribute }}: {{ detail.value }}</li>	
+		{% endfor %}
+	</ul>
+	{% if product.price %}
+	<div class="product_price">
+		{{ product.price }}
+	</div>
+	{% endif %}
+{% spaceless %}
+	{% if product.main_image.image %}
+	<div class="product_picture">
+	  	{% with product.main_image as main %}
+		  	<img src="{{ main.image.url }}" width="{{ main.image.width }}" height="{{ main.image.height }}" alt="{{ main.caption }}" />
+		  	{% if main.caption %}
+		  	<div class="caption">{{ main.caption }}</div>
+		  	{% endif %}	  	
+	  	{% endwith %}
+	</div>
+	{% endif %}
+{% endspaceless %}
+	<div class="product_full">
+	{% render_placeholder product.description %}
+	</div>      
+</div>
+
+{% endblock %}

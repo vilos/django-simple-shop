@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% load thumbnail %}
+{% load placeholder_tags %}
+
+{% block content %}
+<div class="category clearfix">
+  <div class="picture">
+    {% for catimg in category.images.all %}
+      <img src="{% thumbnail catimg.image 250x250 crop=True %}" alt="{{ catimg.caption|default:category.name }}"/>
+    {% endfor %}
+  </div>
+  <h1>{{ category.name }}</h1>
+  <div class="description">{{ category.description|safe }}</div>
+</div>
+<ul class="products clearfix">
+  {% for product in products %}
+  <li class="item">
+    <h3><a href="{% url catalog_product_detail slug=product.slug %}">{{ product.name }}</a></h3>
+  	{% if product.main_image.image %}
+  	<div class="picture">
+      {% with product.main_image as main %}
+      <a href="{% url catalog_product_detail slug=product.slug %}">
+        <img src="{% thumbnail main.image 160x160 crop=True %}" alt="{{ main.caption|default:product.name }}" />
+      </a>
+      {% endwith %}
+  	</div>
+  	{% endif %}
+  	<div class="description">
+  	{% render_placeholder product.description %}
+  	</div>
+  </li>
+  {% endfor %}
+</ul>
+{% endblock %}

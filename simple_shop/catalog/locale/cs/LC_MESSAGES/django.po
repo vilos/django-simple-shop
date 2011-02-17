@@ -1,0 +1,256 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2011-01-25 22:56+0100\n"
+"PO-Revision-Date: 2011-01-25 23:13+0100\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n==1 ? 0 : n>1 && n<5 ? 1 : 2;\n"
+
+#: cms_app.py:8
+#: menu.py:8
+msgid "Catalog"
+msgstr "Katalóg"
+
+#: fields.py:6
+msgid "currency"
+msgstr "měna"
+
+#: models.py:41
+#: models.py:406
+msgid "is active"
+msgstr "aktivní"
+
+#: models.py:45
+msgid "Path"
+msgstr "Cesta"
+
+#: models.py:46
+msgid "ordering"
+msgstr "řazení"
+
+#: models.py:48
+msgid "Category template"
+msgstr "Šablona kategorie"
+
+#: models.py:58
+msgid "Category"
+msgstr "Kategorie"
+
+#: models.py:59
+#: models.py:211
+msgid "Categories"
+msgstr "Kategorie"
+
+#: models.py:173
+msgid "Caption"
+msgstr "Popisek"
+
+#: models.py:175
+msgid "Icon"
+msgstr "Ikona"
+
+#: models.py:176
+#: models.py:310
+#: models.py:331
+#: models.py:353
+msgid "Sort Order"
+msgstr "Řazení"
+
+#: models.py:187
+msgid "Category Image"
+msgstr ""
+
+#: models.py:188
+msgid "Category Images"
+msgstr ""
+
+#: models.py:198
+msgid "Full Name"
+msgstr "Název"
+
+#: models.py:199
+msgid "This is what the product will be called in the default site language."
+msgstr ""
+
+#: models.py:200
+msgid "Item No."
+msgstr "Objednací číslo"
+
+#: models.py:201
+msgid "Used for URLs, auto-generated from name if blank"
+msgstr ""
+
+#: models.py:202
+msgid "Model No."
+msgstr "Modelové číslo"
+
+#: models.py:203
+msgid "Defaults to slug if left blank."
+msgstr ""
+
+#: models.py:204
+msgid "Short description of product"
+msgstr "Krátký popis položky"
+
+#: models.py:205
+msgid "This should be a 1 or 2 line description for use in product listing screens"
+msgstr ""
+
+#: models.py:209
+msgid "Active"
+msgstr "Aktivní"
+
+#: models.py:209
+msgid "Is product Active?"
+msgstr ""
+
+#: models.py:212
+msgid "Ordering"
+msgstr ""
+
+#: models.py:212
+msgid "Override alphabetical order in category display"
+msgstr ""
+
+#: models.py:213
+msgid "Featured Item"
+msgstr "Akční položka"
+
+#: models.py:213
+msgid "Featured items will show on the front page"
+msgstr ""
+
+#: models.py:214
+msgid "Date added"
+msgstr "Vloženo"
+
+#: models.py:220
+msgid "Product"
+msgstr ""
+
+#: models.py:221
+msgid "Products"
+msgstr ""
+
+#: models.py:289
+msgid "Product Detail"
+msgstr ""
+
+#: models.py:290
+msgid "Products Details"
+msgstr ""
+
+#: models.py:322
+msgid "Attribute"
+msgstr "Parametr"
+
+#: models.py:323
+msgid "Attributes"
+msgstr "Parametry"
+
+#: models.py:330
+#: models.py:341
+msgid "Attribute Group"
+msgstr "Skupina parametrů"
+
+#: models.py:331
+msgid "The display order for this group."
+msgstr ""
+
+#: models.py:342
+msgid "Attribute Groups"
+msgstr ""
+
+#: models.py:351
+msgid "Optional caption"
+msgstr ""
+
+#: models.py:364
+msgid "Product Image"
+msgstr ""
+
+#: models.py:365
+msgid "Product Images"
+msgstr ""
+
+#: models.py:368
+msgid "name"
+msgstr "jméno"
+
+#: models.py:369
+msgid "rate"
+msgstr ""
+
+#: models.py:370
+msgid "priority"
+msgstr ""
+
+#: models.py:371
+msgid "Used to order the tax classes in the administration interface."
+msgstr ""
+
+#: models.py:375
+#: models.py:404
+msgid "tax class"
+msgstr ""
+
+#: models.py:376
+msgid "tax classes"
+msgstr ""
+
+#: models.py:398
+msgid "product"
+msgstr "položka"
+
+#: models.py:400
+msgid "unit price"
+msgstr "jednotková cena"
+
+#: models.py:401
+msgid "tax included"
+msgstr "včetně DPH"
+
+#: models.py:402
+msgid "Is tax included in given unit price?"
+msgstr ""
+
+#: models.py:407
+msgid "valid from"
+msgstr "platný od"
+
+#: models.py:408
+msgid "valid until"
+msgstr "platný do"
+
+#: models.py:410
+msgid "is sale"
+msgstr "akce"
+
+#: models.py:411
+msgid "Set this if this price is a sale price."
+msgstr "akční cena"
+
+#: models.py:416
+msgid "product price"
+msgstr "cena"
+
+#: models.py:417
+msgid "product prices"
+msgstr "ceny"
+
+#: views.py:15
+#: views.py:38
+msgid "Featured products"
+msgstr "Akční nabídka"
+
